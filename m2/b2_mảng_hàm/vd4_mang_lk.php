@@ -14,5 +14,15 @@ foreach ($xe as $yamaha => $sirius) {
     echo "<br>";
 }
 ?>
+
+
+<?php
+$xe = [
+    "hang xe" => "hon da",
+    "loai xe" => "wave"
+]; 
+echo $xe["hang xe"] . $xe["loai xe"]; 
+?>
+
 </body>
 </html>

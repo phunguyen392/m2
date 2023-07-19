@@ -6,16 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    
-<?php
-$dien = ["dien gio", "dien than", "dien mat troi", "dien nhiet"];
-// $do_dai = count($dien);
+    <?php
 
-for ($i=0;$i < count($dien); $i++) { 
-    echo $dien[$i];
-    echo "<br>";
-
-}
+$json_chuoi = '{"ten": "teo", "tuoi": 20, "dia chi": "ha dong"}';
+$array = json_decode($json_chuoi, true);
+echo "<pre>";
+print_r($array);
+echo "</pre>";
 ?>
 </body>
 </html>
