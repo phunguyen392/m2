@@ -19,8 +19,8 @@ for ($k = 0; $k < count($mang_so_nguyen3); $k++) {
 for ($k = 0; $k < count($mang_so_nguyen4); $k++) {
     $mang_so_nguyen[] = $mang_so_nguyen4[$k];
 }
-
+$so_nguyen_dao_nguoc = array_reverse($mang_so_nguyen);
 echo "<pre>";
 
-print_r($mang_so_nguyen);
+print_r($so_nguyen_dao_nguoc);
 echo "</pre>";
