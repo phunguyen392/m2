@@ -1,8 +1,8 @@
 <form action="" method="post">
     so thu nhat:<br>
-    <input type="number" name="so_thu_nhat" value=""><br>
+    <input type="number" name="so_thu_nhat" value="" style="width:25%; color:blue; " placeholder="Ưng nhập số mấy thì nhập"><br>
     so thu hai:<br>
-    <input type="number" name="so_thu_hai" value=""><br>
+    <input  type="number" name="so_thu_hai" value="" placeholder="Nếu chia tuyệt đối không nhập số 0" style=" width : 25%; color:red"><br>
     <select name="toan_tu" id="">
         <option value="cong">cong</option>
         <option value="tru">tru</option>
@@ -59,11 +59,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $ket_qua = $so_thu_nhat / $so_thu_hai;
                 break;
         }
-        echo "ket qua la " . $ket_qua;
+        echo "ket qua la: " . $ket_qua;
     } catch (Exception $e) {
         echo "Lỗi: " . $e->getMessage();
     }
 }
 
 
-?>
+
