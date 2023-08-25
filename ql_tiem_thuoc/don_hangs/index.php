@@ -62,7 +62,12 @@ include '../include/sidebar.php';
 <h2>LIỆT KÊ HÓA ĐƠN</h2>
 
 <div class="container">
-  <a class="btn btn-primary" href="http://localhost/ql_tiem_thuoc/don_hangs/create.php" role="button">Thêm</a>
+  <div style="text-align: right;">
+
+    <a class="btn btn-primary" href="http://localhost/ql_tiem_thuoc/don_hangs/create.php" role="button">Thêm</a>
+  
+  </div>
+  <br>
 <table border="2" class="container" >
   <tr>
     <th>STT</th>

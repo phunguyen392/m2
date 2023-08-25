@@ -65,7 +65,12 @@ include '../include/sidebar.php';
 <h2>LIỆT KÊ DANH MỤC THUỐC</h2>
 
 <div class="container">
-<a class="btn btn-primary" href="http://localhost/ql_tiem_thuoc/danh_muc_thuoc/create.php" role="button">Thêm</a><br>
+
+<div style="text-align: right;">
+  
+  <a class="btn btn-primary" href="http://localhost/ql_tiem_thuoc/danh_muc_thuoc/create.php" role="button">Thêm</a><br>
+</div>
+<br>
 <table border="2" >
   <tr>
     <th>STT</th>

@@ -3,7 +3,7 @@
 include_once '../db.php';
 
 
-$sql = "SELECT thuocs.*, danh_muc_thuoc.name AS danh_muc_name, don_hangs.nsx 
+$sql = "SELECT thuocs.*, danh_muc_thuoc.name , don_hangs.nsx , danh_muc_thuoc.id as danhmucthuoc_id, don_hangs.id as donhang_id
         FROM thuocs
         JOIN danh_muc_thuoc ON thuocs.thuoc_id = danh_muc_thuoc.id
         JOIN don_hangs ON thuocs.nha_cung_cap = don_hangs.id";
@@ -24,7 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
   $don_gia = $_REQUEST['don_gia'];
   $nha_cung_cap = $_REQUEST['nha_cung_cap'];
   $thuoc_id = $_REQUEST['thuoc_id'];
-
+  try{ 
+  
   $sql = "INSERT INTO `thuocs`
  ( `ten_thuoc`,`so_luong`, `don_gia`, `nha_cung_cap`, `thuoc_id`) 
     VALUES 
@@ -32,11 +33,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 
 
-  $conn->exec($sql);
+$conn->exec($sql);
 
 
-
-  header("Location: index.php");
+// chuyen huong vê trang chủ
+header("Location: index.php");
+}
+catch(PDOException $e ){
+  echo "loi trung ten". $e ->getMessage();
+}
 }
 
 include '../include/header.php';
@@ -71,7 +76,7 @@ form{
       <label for="lname">Nhà cung cấp</label><br>
       <select name="nha_cung_cap">
         <?php foreach ($rows as $row) : ?>
-          <option value="<?php echo $row['id']; ?>"><?php echo $row['nha_cung_cap']; ?></option>
+          <option value="<?php echo $row['donhang_id']; ?>"><?php echo $row['nsx']; ?></option>
         <?php endforeach; ?>
       </select><br><br>
      
@@ -81,7 +86,7 @@ form{
       <label for="lname">Danh mục thuốc</label><br>
       <select name="thuoc_id">
         <?php foreach ($rows as $row) : ?>
-          <option value="<?php echo $row['id']; ?>"><?php echo $row['thuoc_id']; ?></option>
+          <option value="<?php echo $row['danhmucthuoc_id']; ?>"><?php echo $row['name']; ?></option>
         <?php endforeach; ?>
       </select><br><br>
 

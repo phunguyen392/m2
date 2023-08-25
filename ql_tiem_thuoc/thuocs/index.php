@@ -108,9 +108,13 @@ if ($_SERVER['REQUEST_METHOD'] == "GET" && isset($_GET['search'])) {
 <div class="container">
   <br>
   <h2>LIỆT KÊ CÁC LOẠI THUỐC</h2><br>
-  <a class="btn btn-primary" href="http://localhost/ql_tiem_thuoc/thuocs/create.php" role="button">Thêm</a>
+  <div style="text-align: right;">
 
-  <table border="2">
+    <a class="btn btn-primary" href="http://localhost/ql_tiem_thuoc/thuocs/create.php" role="button">Thêm</a>
+  </div>
+  <br>
+
+  <table border="">
     <tr>
       <th>STT</th>
       <th>TÊN LOẠI THUỐC</th>
