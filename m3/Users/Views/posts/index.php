@@ -1,6 +1,7 @@
-<?php
-include 'Models/Search.php';
-?>
+<form method="GET" action="index.php?controller=post&action=search">
+            <input type="text" name="search">
+            <input type="submit" value="Tìm">
+        </form>
 <a href="index.php?action=create"> Them moi </a>
 <table border="1">
     <tr>
