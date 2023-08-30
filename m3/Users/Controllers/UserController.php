@@ -20,7 +20,7 @@ class UserController {
         // Goi model
         User::store($_POST);
         // Chuyen huong ve trang danh sach
-        header("Location: index.php?controller=user&action=index");
+        echo '<script>window.location.href = "index.php?controller=user&action=index&success=1";</script>';
 
     }
     // Hien thi form chinh sua
@@ -35,7 +35,7 @@ class UserController {
         $id = $_GET['id'];
         User::update( $id, $_POST );
         // Chuyen huong ve trang danh sach
-        header("Location: index.php?controller=user&action=index");
+        echo '<script>window.location.href = "index.php?controllers=product&action=index&success=1";</script>';
     }
 
     // Xoa
@@ -43,7 +43,7 @@ class UserController {
         $id = $_GET['id'];
         User::delete($id);
         // Chuyen huong ve trang danh sach
-        header("Location: index.php?controller=user&action=index");
+        echo '<script>window.location.href = "index.php?controllers=product&action=index&success=1";</script>';
     }
     // Xem chi tiet
     public function show(){

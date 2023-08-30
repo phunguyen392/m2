@@ -1,4 +1,4 @@
-<form action="index.php?action=update&id=<?= $row['id'];?>" method="post">
+<form action="index.php?action=update&id=<?= $row['id'];?>" method="post" enctype="multipart/form-data">
     TEN :<br><input type="text" name="name" value="<?= $row['name'];?>"> <br>
     email:<br> <input type="text" name="email" value="<?= $row['email'];?>"> <br>
     mat khau :<br><input type="text" name="password" value="<?= $row['password'];?>"> <br>

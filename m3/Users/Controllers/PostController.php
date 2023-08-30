@@ -22,7 +22,7 @@ class PostController {
         // Goi model
         Post::store($_POST);
         // Chuyen huong ve trang danh sach
-        header("Location: index.php?Controller=post&action=index");
+        echo '<script>window.location.href = "index.php?controller=post&action=index";</script>';
 
     }
     // Hien thi form chinh sua

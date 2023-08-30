@@ -85,13 +85,13 @@ class Post
     }
 
     //tim du lieu
-    public static function search()
-    {
-        global $conn;
-        $sql = "SELECT * FROM posts WHERE id LIKE '%$search%";
-        $stmt = $conn->query($sql);
-        $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        $row = $stmt->fetch();
-        return $row;
-    }
+    // public static function search()
+    // {
+    //     global $conn;
+    //     $sql = "SELECT * FROM posts WHERE id LIKE '%$search%";
+    //     $stmt = $conn->query($sql);
+    //     $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    //     $row = $stmt->fetch();
+    //     return $row;
+    // }
 }
